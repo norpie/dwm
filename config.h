@@ -8,11 +8,13 @@ static const int swallowfloating         = 1;   /* 1 means swallow floating wind
 #ifdef desktop
 static const unsigned int gappih         = 6;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 6;  /* vert inner gap between windows */
+
 static const unsigned int gappoh         = 5;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 10;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappov         = 5;  /* vert outer gap between windows and screen edge */
 #elif laptop
 static const unsigned int gappih         = 12;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 12;  /* vert inner gap between windows */
+
 static const unsigned int gappoh         = 12;  /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov         = 12;  /* vert outer gap between windows and screen edge */
 #endif

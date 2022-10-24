@@ -2253,7 +2253,7 @@ updatebarpos(Monitor *m)
     m->wh = m->mh;
     Bar *bar;
     int y_pad = 6;
-    int x_pad = 10;
+    int x_pad = 5;
 
 
     for (bar = m->bar; bar; bar = bar->next) {
