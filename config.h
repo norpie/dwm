@@ -269,6 +269,7 @@ static const char *eclipsecmd[] = { "eclipse", NULL };
 static const char *discordcmd[] = { "discord", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
 
+#include <X11/XF86keysym.h>
 
 static Key keys[] = {
     /* modifier                     key            function                argument */
