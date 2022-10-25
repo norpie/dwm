@@ -26,7 +26,7 @@ static const int topbar                  = 0;   /* 0 means bottom bar */
 static const int statusmon               = -1;
 
 /* Indicators: see patch/bar_indicators.h for options */
-static int tagindicatortype              = INDICATOR_TOP_LEFT_SQUARE;
+static int tagindicatortype              = INDICATOR_TOP_LEFT_LARGER_SQUARE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 
