@@ -291,19 +291,15 @@ static Key keys[] = {
 
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 
-    // Volume keys
-    { MODKEY|ShiftMask,             XK_comma,  spawn,          SHCMD("volume -d 5") },
-    { MODKEY|ShiftMask,             XK_period, spawn,          SHCMD("volume -i 5") },
-
     { 0,              XF86XK_AudioRaiseVolume, spawn,          SHCMD("volume -i 5") },
     { 0,              XF86XK_AudioLowerVolume, spawn,          SHCMD("volume -d 5") },
     { 0,              XF86XK_AudioMute,        spawn,          SHCMD("volume -m") },
 
-    { 0,              XF86XK_AudioPlay,        spawn,          SHCMD("mpris-ctl pp") },
-    { 0,              XF86XK_AudioPause,       spawn,          SHCMD("mpris-ctl pp") },
-    { 0,              XF86XK_AudioStop,        spawn,          SHCMD("mpris-ctl pause") },
-    { 0,              XF86XK_AudioNext,        spawn,          SHCMD("mpris-ctl --player active next") },
-    { 0,              XF86XK_AudioPrev,        spawn,          SHCMD("mpris-ctl --player active prev") },
+    { 0,              XF86XK_AudioPlay,        spawn,          SHCMD("playerctl play-pause") },
+    { 0,              XF86XK_AudioPause,       spawn,          SHCMD("playerctl play-pause") },
+    { 0,              XF86XK_AudioStop,        spawn,          SHCMD("playerctl play-pause") },
+    { 0,              XF86XK_AudioNext,        spawn,          SHCMD("playerctl next") },
+    { 0,              XF86XK_AudioPrev,        spawn,          SHCMD("playerctl previous") },
 
     { 0,              XF86XK_MonBrightnessUp,  spawn,          SHCMD("brightness -i 5") },
     { 0,              XF86XK_MonBrightnessDown,spawn,          SHCMD("brightness -d 5") },
@@ -331,10 +327,6 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_h,      focustagmon,    {.i = -1 } },
     { MODKEY|ShiftMask,             XK_l,      focustagmon,    {.i = +1 } },
 
-    // Music keys
-    { MODKEY,                       XK_comma,  spawn,          SHCMD("mpris-ctl --player active prev") },
-    { MODKEY,                       XK_period, spawn,          SHCMD("mpris-ctl --player active pp") },
-    { MODKEY,                       XK_slash,  spawn,          SHCMD("mpris-ctl --player active next") },
 
     TAGKEYS(                        XK_1,                                  0)
     TAGKEYS(                        XK_2,                                  1)
