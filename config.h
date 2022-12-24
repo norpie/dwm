@@ -1,22 +1,22 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx       = 0;   /* border pixel of windows */
-static const unsigned int snap           = 8;  /* snap pixel */
-static const int swallowfloating         = 1;   /* 1 means swallow floating windows by default */
-
-#ifdef desktop
-static const unsigned int gappih         = 6;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 6;  /* vert inner gap between windows */
-
-static const unsigned int gappoh         = 5;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 5;  /* vert outer gap between windows and screen edge */
-#elif laptop
+#ifdef laptop
 static const unsigned int gappih         = 12;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 12;  /* vert inner gap between windows */
 
 static const unsigned int gappoh         = 12;  /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov         = 12;  /* vert outer gap between windows and screen edge */
+#else
+static const unsigned int borderpx       = 0;   /* border pixel of windows */
+static const unsigned int snap           = 8;  /* snap pixel */
+static const int swallowfloating         = 1;   /* 1 means swallow floating windows by default */
+
+static const unsigned int gappih         = 6;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 6;  /* vert inner gap between windows */
+
+static const unsigned int gappoh         = 5;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 5;  /* vert outer gap between windows and screen edge */
 #endif
 
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
@@ -30,17 +30,17 @@ static int tagindicatortype              = INDICATOR_TOP_LEFT_LARGER_SQUARE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 
-#ifdef desktop
-static const char *fonts[]          = {
-   "LiterationMono Nerd Font:pixelsize=14:antialias=true:autohint=true",
-   "JoyPixels:pixelsize=12:antialias=true:autohint=true",
-   "Latin Modern Math:pixelsize=12:antialias=true:autohint=true",
-};
-#elif laptop
+#ifdef laptop
 static const char *fonts[]          = {
    "LiterationMono Nerd Font:pixelsize=20:antialias=true:autohint=true",
    "JoyPixels:pixelsize=18:antialias=true:autohint=true",
    "Latin Modern Math:pixelsize=18:antialias=true:autohint=true",
+};
+#else
+static const char *fonts[]          = {
+   "LiterationMono Nerd Font:pixelsize=14:antialias=true:autohint=true",
+   "JoyPixels:pixelsize=12:antialias=true:autohint=true",
+   "Latin Modern Math:pixelsize=12:antialias=true:autohint=true",
 };
 #endif
 
