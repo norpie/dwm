@@ -2,11 +2,11 @@
 
 /* appearance */
 #ifdef laptop
-static const unsigned int gappih         = 12;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 12;  /* vert inner gap between windows */
+static const unsigned int gappih         = 8;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 7;  /* vert inner gap between windows */
 
-static const unsigned int gappoh         = 12;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 12;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappoh         = 8;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 7;  /* vert outer gap between windows and screen edge */
 #else
 static const unsigned int gappih         = 6;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 6;  /* vert inner gap between windows */

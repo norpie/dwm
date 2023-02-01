@@ -2252,8 +2252,13 @@ updatebarpos(Monitor *m)
     m->ww = m->mw;
     m->wh = m->mh;
     Bar *bar;
+#ifdef laptop
+    int y_pad = 6;
+    int x_pad = 8;
+#else
     int y_pad = 6;
     int x_pad = 5;
+#endif
 
 
     for (bar = m->bar; bar; bar = bar->next) {
