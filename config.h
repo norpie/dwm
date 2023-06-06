@@ -255,6 +255,9 @@ static const char *dmenuappimagecmd[] = { "dmenu-appimage", NULL };
 static const char *dmenuinsertcmd[] = { "dmenu-insert", NULL };
 static const char *dmenuoutputcmd[] = { "dmenu-output", NULL };
 
+static const char *dmenumountcmd[] = { "dmenu-mount", NULL };
+static const char *dmenuumountcmd[] = { "dmenu-unmount", NULL };
+
 static const char *dmenubluetoothcmd[] = { "st", "-e", "bluetooth", NULL };
 
 static const char *dmenurestartcmd[] = { "dmenu-restart", NULL };
@@ -308,6 +311,9 @@ static Key keys[] = {
     { MODKEY,                       XK_e,      spawn,          {.v = eclipsecmd } },
     { MODKEY,                       XK_s,      spawn,          {.v = spotifycmd } },
     { MODKEY,                       XK_d,      spawn,          {.v = discordcmd } },
+
+    { MODKEY,                       XK_m,      spawn,          {.v = dmenumountcmd } },
+    { MODKEY,                       XK_u,      spawn,          {.v = dmenuumountcmd } },
 
     { MODKEY,                       XK_f,      togglebar,      {0} },
 
