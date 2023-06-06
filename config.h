@@ -176,10 +176,6 @@ static const Rule rules[] = {
     RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
     RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 #ifdef desktop
-    RULE(.class = "firefox", .monitor = 1)
-
-    RULE(.title = "Sqlectron", .monitor = 1, .tags = 1 << 1)
-
     RULE(.title = "Discord", .monitor = 0)
 
     RULE(.class = "spotify", .monitor = 3, .tags = 1 << 1)
