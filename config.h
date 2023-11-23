@@ -1,19 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-#ifdef laptop
-static const unsigned int gappih         = 8;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 7;  /* vert inner gap between windows */
-
-static const unsigned int gappoh         = 8;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 7;  /* vert outer gap between windows and screen edge */
-#else
-static const unsigned int gappih         = 6;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 6;  /* vert inner gap between windows */
-
-static const unsigned int gappoh         = 5;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 5;  /* vert outer gap between windows and screen edge */
-#endif
+static const unsigned int gappih         = 0;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 0;  /* vert inner gap between windows */
+static const unsigned int gappoh         = 0;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 0;  /* vert outer gap between windows and screen edge */
 
 static const int swallowfloating         = 1;   /* 1 means swallow floating windows by default */
 static const unsigned int snap           = 8;  /* snap pixel */
@@ -29,19 +20,11 @@ static int tagindicatortype              = INDICATOR_TOP_LEFT_LARGER_SQUARE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 
-#ifdef laptop
 static const char *fonts[]          = {
-   "LiterationMono Nerd Font:pixelsize=20:antialias=true:autohint=true",
-   "JoyPixels:pixelsize=18:antialias=true:autohint=true",
-   "Latin Modern Math:pixelsize=18:antialias=true:autohint=true",
-};
-#else
-static const char *fonts[]          = {
-   "LiterationMono Nerd Font:pixelsize=14:antialias=true:autohint=true",
+   "JetBrainsMonoNL NF:pixelsize=14:antialias=true:autohint=true",
    "JoyPixels:pixelsize=12:antialias=true:autohint=true",
    "Latin Modern Math:pixelsize=12:antialias=true:autohint=true",
 };
-#endif
 
 static const char dmenufont[]            = "monospace:size=10";
 
@@ -254,7 +237,10 @@ static const char *dmenuoutputcmd[] = { "dmenu-output", NULL };
 static const char *dmenumountcmd[] = { "dmenu-mount", NULL };
 static const char *dmenuumountcmd[] = { "dmenu-unmount", NULL };
 
+static const char *dmenusteam[] = { "steam", "--launch", NULL };
+
 static const char *dmenubluetoothcmd[] = { "st", "-e", "bluetooth", NULL };
+static const char *dmenubluetoothdccmd[] = { "st", "-e", "dmenu-bluetooth-disconnect", NULL };
 
 static const char *dmenurestartcmd[] = { "dmenu-restart", NULL };
 
@@ -278,10 +264,13 @@ static Key keys[] = {
 
     { MODKEY,                       XK_a,      spawn,          {.v = dmenuappimagecmd } },
 
+    { MODKEY,                       XK_g,      spawn,          {.v = dmenusteam } },
+
     { MODKEY,                       XK_i,      spawn,          {.v = dmenuinsertcmd } },
     { MODKEY,                       XK_o,      spawn,          {.v = dmenuoutputcmd } },
 
     { MODKEY,                       XK_b,      spawn,          {.v = dmenubluetoothcmd } },
+    { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = dmenubluetoothdccmd } },
 
     { MODKEY,                       XK_r,      spawn,          {.v = dmenurestartcmd } },
 
