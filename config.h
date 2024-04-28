@@ -285,9 +285,10 @@ static Key keys[] = {
     { 0,              XF86XK_AudioLowerVolume, spawn,          SHCMD("volume -d 5") },
     { 0,              XF86XK_AudioMute,        spawn,          SHCMD("volume -m") },
 
-    { 0,              XF86XK_AudioPlay,        spawn,          SHCMD("playerctl play-pause") },
-    { 0,              XF86XK_AudioPause,       spawn,          SHCMD("playerctl play-pause") },
-    { 0,              XF86XK_AudioStop,        spawn,          SHCMD("playerctl play-pause") },
+    /* { 0,              XF86XK_AudioPlay,        spawn,          SHCMD("playerctl play") }, */
+    { 0,              XF86XK_AudioPlay,        spawn,          SHCMD("playerctl play-pause")},
+    { 0,              XF86XK_AudioPause,       spawn,          SHCMD("playerctl pause") },
+    { 0,              XF86XK_AudioStop,        spawn,          SHCMD("playerctl pause") },
     { 0,              XF86XK_AudioNext,        spawn,          SHCMD("playerctl next") },
     { 0,              XF86XK_AudioPrev,        spawn,          SHCMD("playerctl previous") },
 
