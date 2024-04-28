@@ -159,16 +159,19 @@ static const Rule rules[] = {
     RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
     RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 #ifdef desktop
-    RULE(.title = "Discord", .monitor = 0)
+    RULE(.title = "Entertainment", .monitor = 2, .tags = 1 << 0)
+    RULE(.class = "Spotify", .monitor = 2, .tags = 1 << 1)
+    RULE(.title = "Discord", .monitor = 2, .tags = 1 << 2)
+    RULE(.class = "plexmediaplayer", .monitor = 2, .tags = 1 << 3)
 
-    RULE(.class = "spotify", .monitor = 3, .tags = 1 << 1)
-    RULE(.class = "Spotify", .monitor = 3, .tags = 1 << 1)
-
-    RULE(.title = "Entertainment", .monitor = 3)
-    RULE(.title = "qBittorrent", .monitor = 3, .tags = 1 << 8)
+    RULE(.title = "Volume Control", .monitor = 2, .tags = 1 << 7)
+    RULE(.title = "qBittorrent", .monitor = 2, .tags = 1 << 8)
 #endif
     RULE(.class = "st", .isterminal = 1)
     RULE(.class = "St", .isterminal = 1)
+
+    RULE(.class = "rustdesk", .isfloating = 1)
+    RULE(.class = "Rustdesk", .isfloating = 1)
 
     RULE(.class = "MultiMC 5 - Version 0.6.16-custom", .isterminal = 0)
     RULE(.title = "Chrome", .isterminal = 0)
@@ -239,8 +242,8 @@ static const char *dmenuumountcmd[] = { "dmenu-unmount", NULL };
 
 static const char *dmenusteam[] = { "steam", "--launch", NULL };
 
-static const char *dmenubluetoothcmd[] = { "st", "-e", "bluetooth", NULL };
-static const char *dmenubluetoothdccmd[] = { "st", "-e", "dmenu-bluetooth-disconnect", NULL };
+static const char *dmenubluetoothcmd[] = { "dmenu-bluetooth-connect", NULL };
+static const char *dmenubluetoothdccmd[] = { "dmenu-bluetooth-disconnect", NULL };
 
 static const char *dmenurestartcmd[] = { "dmenu-restart", NULL };
 
