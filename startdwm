@@ -1,8 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 while true; do
-    # Log stderror to a file 
+    # dwm with logging, stdout 1 and stderr 2 are redirected to ~/.dwm.log
     dwm 2> ~/.cache/dwm.log
-    # No error logging
-    #dwm >/dev/null 2>&1
 done
