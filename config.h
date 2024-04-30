@@ -240,7 +240,7 @@ static const char *dmenuoutputcmd[] = { "dmenu-output", NULL };
 static const char *dmenumountcmd[] = { "dmenu-mount", NULL };
 static const char *dmenuumountcmd[] = { "dmenu-unmount", NULL };
 
-static const char *dmenusteam[] = { "steam", "--launch", NULL };
+static const char *dmenusteam[] = { "dmenu-steam", NULL };
 
 static const char *dmenubluetoothcmd[] = { "dmenu-bluetooth-connect", NULL };
 static const char *dmenubluetoothdccmd[] = { "dmenu-bluetooth-disconnect", NULL };
