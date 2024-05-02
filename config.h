@@ -170,6 +170,8 @@ static const Rule rules[] = {
     RULE(.class = "st", .isterminal = 1)
     RULE(.class = "St", .isterminal = 1)
 
+    RULE(.class = "xev", .noswallow = 1)
+
     RULE(.class = "rustdesk", .isfloating = 1)
     RULE(.class = "Rustdesk", .isfloating = 1)
 
