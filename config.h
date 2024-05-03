@@ -287,12 +287,11 @@ static Key keys[] = {
     { 0,              XF86XK_AudioLowerVolume, spawn,          SHCMD("volume -d 5") },
     { 0,              XF86XK_AudioMute,        spawn,          SHCMD("volume -m") },
 
-    /* { 0,              XF86XK_AudioPlay,        spawn,          SHCMD("playerctl play") }, */
-    { 0,              XF86XK_AudioPlay,        spawn,          SHCMD("playerctl play-pause")},
-    { 0,              XF86XK_AudioPause,       spawn,          SHCMD("playerctl pause") },
-    { 0,              XF86XK_AudioStop,        spawn,          SHCMD("playerctl pause") },
-    { 0,              XF86XK_AudioNext,        spawn,          SHCMD("playerctl next") },
-    { 0,              XF86XK_AudioPrev,        spawn,          SHCMD("playerctl previous") },
+    { 0,              XF86XK_AudioPlay,        spawn,          SHCMD("media play-pause")},
+    { 0,              XF86XK_AudioPause,       spawn,          SHCMD("media pause") },
+    { 0,              XF86XK_AudioStop,        spawn,          SHCMD("media stop") },
+    { 0,              XF86XK_AudioNext,        spawn,          SHCMD("media next") },
+    { 0,              XF86XK_AudioPrev,        spawn,          SHCMD("media previous") },
 
     { 0,              XF86XK_MonBrightnessUp,  spawn,          SHCMD("brightness -i 5") },
     { 0,              XF86XK_MonBrightnessDown,spawn,          SHCMD("brightness -d 5") },
