@@ -253,7 +253,7 @@ static const char *dmenupowercmd[] = { "dmenu-power", NULL };
 
 static const char *browsercmd[] = { "chrome", NULL };
 
-static const char *wallpapercmd[] = { "wallpaper-window", NULL };
+static const char *wallpapercmd[] = { "wallpaper --gui", NULL };
 
 static const char *eclipsecmd[] = { "eclipse", NULL };
 
