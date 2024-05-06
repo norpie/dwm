@@ -1044,7 +1044,7 @@ drawbarwin(Bar *bar)
         bar->w[r] = w;
         darg.x = bar->x[r];
         darg.y = bar->borderpx;
-        darg.h = bar->bh - 2 * bar->borderpx;
+        darg.h = bar->bh - 0 * bar->borderpx;
         darg.w = bar->w[r];
         if (br->drawfunc)
             total_drawn += br->drawfunc(bar, &darg);
@@ -2252,23 +2252,15 @@ updatebarpos(Monitor *m)
     m->ww = m->mw;
     m->wh = m->mh;
     Bar *bar;
-#ifdef laptop
-    int y_pad = 0;
-    int x_pad = 0;
-#else
-    int y_pad = 0;
-    int x_pad = 0;
-#endif
-
 
     for (bar = m->bar; bar; bar = bar->next) {
-        bar->bx = m->wx + x_pad;
-        bar->bw = m->ww - 0 * x_pad;
+        bar->bx = m->wx;
+        bar->bw = m->ww;
     }
 
     for (bar = m->bar; bar; bar = bar->next)
         if (!m->showbar || !bar->showbar)
-            bar->by = -bar->bh - y_pad;
+            bar->by = -bar->bh;
 
 
     if (!m->showbar)
@@ -2277,8 +2269,8 @@ updatebarpos(Monitor *m)
         if (!bar->showbar)
             continue;
         if (bar->topbar)
-            m->wy = m->wy + bar->bh + y_pad;
-        m->wh -= y_pad + bar->bh;
+            m->wy = m->wy + bar->bh;
+        m->wh -= bar->bh;
         bar->by = (bar->topbar ? m->wy - bar->bh : m->wy + m->wh);
     }
 }
