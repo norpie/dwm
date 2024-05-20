@@ -21,9 +21,9 @@ static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 
 static const char *fonts[]          = {
-   "JetBrainsMonoNL NF:pixelsize=14:antialias=true:autohint=true",
-   "JoyPixels:pixelsize=12:antialias=true:autohint=true",
-   "Latin Modern Math:pixelsize=12:antialias=true:autohint=true",
+   "JetBrainsMonoNL NF:pixelsize=16:antialias=true:autohint=true",
+   "Latin Modern Math:pixelsize=16:antialias=true:autohint=true",
+   "JoyPixels:pixelsize=14:antialias=true:autohint=true",
 };
 
 static const char dmenufont[]            = "monospace:size=10";
@@ -232,7 +232,8 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *sudodmenucmd[] = { "sudo", "dmenu_run", NULL };
 
-static const char *termcmd[]  = { "st", NULL };
+// Launch `tmux attach` in st
+static const char *termcmd[]  = { "st", "-e", "tmux", "attach", NULL };
 
 static const char *dmenuappimagecmd[] = { "dmenu-appimage", NULL };
 

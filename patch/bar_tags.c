@@ -37,20 +37,16 @@ draw_tags(Bar *bar, BarArg *a)
             : SchemeTagsNorm
         ]);*/ // TODO: convert to an if statement
         drw_setscheme(drw, scheme[SchemeTagsNorm]);
-        int ulinepad = 5;
-        int ulinestroke = 2;
+        int ulinepad = 8;
+        int ulinestroke = 1;
         int ulinevoffset = 2;
         drw_text(drw, x, a->y, w, a->h, lrpad / 2, icon, invert, False);
         if (m->tagset[m->seltags] & 1 << i) {
             drw_rect(drw, x + ulinepad, bh - ulinestroke - ulinevoffset, w - (ulinepad * 2), ulinestroke, 1, 0);
         }
         drawindicator(m, NULL, occ, x, a->y, w, a->h, i, -1, invert, tagindicatortype);
-        // If selected draw underlining
-        if (m->tagset[m->seltags] & 1 << i) {
-        }
         x += w;
     }
-
     return 1;
 }
 
