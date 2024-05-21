@@ -232,8 +232,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *sudodmenucmd[] = { "sudo", "dmenu_run", NULL };
 
-// Launch `tmux attach` in st
-static const char *termcmd[]  = { "st", "-e", "tmux", "attach", NULL };
+static const char *termcmd[]  = { "st-tmux", NULL };
 
 static const char *dmenuappimagecmd[] = { "dmenu-appimage", NULL };
 
