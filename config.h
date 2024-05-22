@@ -21,8 +21,8 @@ static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_TOP_LEFT_SQUARE;
 
 static const char *fonts[]          = {
-   "JetBrainsMonoNL NF:pixelsize=16:antialias=true:autohint=true",
-   "Latin Modern Math:pixelsize=16:antialias=true:autohint=true",
+   "JetBrainsMonoNL NF:pixelsize=14:antialias=true:autohint=true",
+   "Latin Modern Math:pixelsize=14:antialias=true:autohint=true",
    "JoyPixels:pixelsize=14:antialias=true:autohint=true",
 };
 
