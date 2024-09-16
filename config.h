@@ -176,9 +176,6 @@ static const Rule rules[] = {
     RULE(.class = "Rustdesk", .isfloating = 1)
 
     RULE(.class = "MultiMC 5 - Version 0.6.16-custom", .isterminal = 0)
-    RULE(.title = "Chrome", .isterminal = 0)
-    RULE(.title = "chrome", .isterminal = 0)
-    RULE(.title = "chrome", .isterminal = 0)
 };
 
 
@@ -251,7 +248,7 @@ static const char *dmenurestartcmd[] = { "dmenu-restart", NULL };
 
 static const char *dmenupowercmd[] = { "dmenu-power", NULL };
 
-static const char *browsercmd[] = { "chrome", NULL };
+static const char *browsercmd[] = { "firefox", NULL };
 
 static const char *wallpapercmd[] = { "wallpaper", "--gui", NULL };
 
