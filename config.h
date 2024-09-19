@@ -251,8 +251,7 @@ static const char *dmenupowercmd[] = { "dmenu-power", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 
 static const char *wallpapercmd[] = { "wallpaper", "--gui", NULL };
-
-static const char *eclipsecmd[] = { "eclipse", NULL };
+static const char *printingcmd[] = { "gtklp", NULL };
 
 static const char *discordcmd[] = { "discord", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
@@ -294,10 +293,11 @@ static Key keys[] = {
     { 0,              XF86XK_MonBrightnessDown,spawn,          SHCMD("brightness -d 5") },
 
     { MODKEY,                       XK_c,      spawn,          {.v = browsercmd } },
-    { MODKEY,                       XK_w,      spawn,          {.v = wallpapercmd } },
-    { MODKEY,                       XK_e,      spawn,          {.v = eclipsecmd } },
     { MODKEY,                       XK_s,      spawn,          {.v = spotifycmd } },
     { MODKEY,                       XK_d,      spawn,          {.v = discordcmd } },
+
+    { MODKEY,                       XK_w,      spawn,          {.v = wallpapercmd } },
+    { MODKEY,                       XK_p,      spawn,          {.v = printingcmd } },
 
     { MODKEY,                       XK_m,      spawn,          {.v = dmenumountcmd } },
     { MODKEY,                       XK_u,      spawn,          {.v = dmenuumountcmd } },
