@@ -235,6 +235,7 @@ static const char *dmenuappimagecmd[] = { "dmenu-appimage", NULL };
 
 static const char *dmenuinsertcmd[] = { "dmenu-insert", NULL };
 static const char *dmenuoutputcmd[] = { "dmenu-output", NULL };
+static const char *dmenudrag[] = { "dmenu-drag", NULL };
 
 static const char *dmenumountcmd[] = { "dmenu-mount", NULL };
 static const char *dmenuumountcmd[] = { "dmenu-unmount", NULL };
@@ -269,6 +270,7 @@ static Key keys[] = {
 
     { MODKEY,                       XK_i,      spawn,          {.v = dmenuinsertcmd } },
     { MODKEY,                       XK_o,      spawn,          {.v = dmenuoutputcmd } },
+    { MODKEY,                       XK_d,      spawn,          {.v = dmenudrag } },
 
     { MODKEY,                       XK_b,      spawn,          {.v = dmenubluetoothcmd } },
     { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = dmenubluetoothdccmd } },
